@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Web3 Scope Exporter",
+  "version": "0.5.0",
+  "description": "Copy or save Web3 bug bounty program scope (Immunefi, HackenProof, Cantina) as Markdown or JSON.",
+  "author": {
+    "name": "CanuteTheWise",
+    "url": "https://github.com/CanuteTheWise"
+  },
+  "homepage_url": "https://github.com/CanuteTheWise/web3-scope-exporter",
+  "permissions": [
+    "clipboardWrite",
+    "downloads",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://immunefi.com/*",
+    "https://www.immunefi.com/*",
+    "https://hackenproof.com/*",
+    "https://www.hackenproof.com/*",
+    "https://cantina.xyz/*",
+    "https://www.cantina.xyz/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Web3 Scope Exporter",
+    "default_popup": "popup.html"
+  }
+}

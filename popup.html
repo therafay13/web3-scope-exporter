@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web3 Scope Exporter</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Web3 Scope Exporter</h1>
+
+      <section class="program" aria-live="polite">
+        <div id="platform">Detecting platform…</div>
+        <div id="program" class="program-name"></div>
+        <div id="freshness" class="freshness"></div>
+      </section>
+
+      <div class="controls">
+        <div class="format-switcher" role="tablist" aria-label="Export format">
+          <button id="markdown-tab" type="button" role="tab" data-format="markdown" aria-selected="true">
+            Markdown
+          </button>
+          <button id="json-tab" type="button" role="tab" data-format="json" aria-selected="false">
+            JSON
+          </button>
+        </div>
+
+        <label class="toggle" for="snapshot">
+          <input id="snapshot" type="checkbox" checked>
+          Snapshot section
+        </label>
+      </div>
+
+      <label class="sr-only" for="preview">Scope preview</label>
+      <textarea id="preview" readonly spellcheck="false" placeholder="Loading program scope…"></textarea>
+
+      <p id="status" class="status" role="status" aria-live="polite">Reading the current page…</p>
+
+      <div class="actions">
+        <button id="copy" type="button" disabled>Copy</button>
+        <button id="save" type="button" disabled>Save</button>
+      </div>
+
+      <footer>
+        <span>&copy; <a href="https://github.com/CanuteTheWise" target="_blank" rel="noopener noreferrer">CanuteTheWise</a></span>
+        <span aria-hidden="true">&middot;</span>
+        <a href="https://github.com/CanuteTheWise/web3-scope-exporter" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </footer>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
